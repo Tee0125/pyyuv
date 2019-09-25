@@ -13,3 +13,5 @@ Run
 ```
 python -m PyYuv yuvfilename width height (frame_no)
 ```
+
+press any key to see next frame
