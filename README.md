@@ -1,17 +1,19 @@
-Usage
-___
+# Usage
 
-install dependent packages && install package
+## install dependent packages && install package
 
 ```
 pip install -r requirements.txt
 python setup.py install
 ```
 
-Run
+## Run
 
 ```
 python -m PyYuv yuvfilename width height (frame_no)
 ```
 
-press any key to see next frame
+## Seek
+
+press space or right then go to next frame
+press left then go to previous frame

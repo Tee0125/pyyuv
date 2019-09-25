@@ -64,7 +64,16 @@ def main():
             if e.type == pygame.QUIT:
                 sys.exit(0)
             elif e.type == pygame.KEYDOWN:
-                get_next = True
+                if e.key == pygame.K_LEFT:
+                    frame_no = max(0, frame_no-2)
+                    _.seek_frame(frame_no)
+                    get_next = True
+                elif e.key == pygame.K_RIGHT:
+                    # FIXME: stop at last frame
+                    get_next = True
+                elif e.key == pygame.K_SPACE:
+                    # FIXME: stop at last frame
+                    get_next = True
 
         time.sleep(1)
 
