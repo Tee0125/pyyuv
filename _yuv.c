@@ -55,7 +55,6 @@ yuv_ctx_t* yuv_open(char* filename, int width, int height)
     file_size = ftell(fp);
     fseek(fp, 0, SEEK_SET);
 
-    fprintf(stderr, "w=%d, h=%d\n", width, height);
     frame_size = width*height + (((width+1)/2)*((height+1)/2))*2;
     frame_cnt = file_size / frame_size;
 
@@ -98,7 +97,6 @@ uint8_t* yuv_get_frame(yuv_ctx_t* ctx)
         return NULL;
 
     int n = fread(ctx->frame, 1, ctx->frame_size, ctx->fp);
-    fprintf(stderr, "frame_size: %d, n: %d\n", ctx->frame_size, n);
     ctx->frame_no++;
 
     return yuv420_to_rgb24(ctx->frame, ctx->width, ctx->height);
