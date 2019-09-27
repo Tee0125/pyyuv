@@ -75,7 +75,5 @@ def main():
                     # FIXME: stop at last frame
                     get_next = True
 
-        time.sleep(1)
-
 
 main()
